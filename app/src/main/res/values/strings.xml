@@ -3,4 +3,9 @@
     <string name="getStartedButton">Get Started</string>
     <string name="moreButton">More</string>
     <string name="aaLogo">Acme Atelier Logo</string>
+    <string name="AcmeHorizontal">Acme Atelier Horizontal Logo</string>
+    <string name="Back">Back</string>
+    <string name="home">Home</string>
+    <string name="design">Design</string>
+    <string name="inspiration">Inspiration</string>
 </resources>
