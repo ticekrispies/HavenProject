@@ -16,11 +16,13 @@ public class morePage extends AppCompatActivity {
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.group_4));
         setContentView(R.layout.activity_more_page);
 
-        // Bottom Navbar start
+        /* Bottom Navbar start
         actionBar.setDisplayShowCustomEnabled(true);
         LayoutInflater layoutInflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.actionbarlogo, null);
         actionBar.setCustomView(view);
-        // Bottom Navbar end
+
+        Don't think MORE page needs navbar, as it was intended for admin access?
+         Bottom Navbar end*/
     }
 }

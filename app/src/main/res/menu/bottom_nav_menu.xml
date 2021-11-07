@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">>
     <item
         android:title="@string/home"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
         android:id="@+id/nav_home"
         android:icon="@drawable/homeicon"
         />
     <item
         android:title="@string/design"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
         android:id="@+id/nav_design"
         android:icon="@drawable/kilt"
         />
     <item
         android:title="@string/inspiration"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
         android:id="@+id/nav_inspire"
         android:icon="@drawable/inspireicon"
         />
