@@ -24,6 +24,15 @@ public class homePage extends AppCompatActivity {
         actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.group_4));
         setContentView(R.layout.activity_home_page);
 
+        home = findViewById(R.id.button9);
+        design = findViewById(R.id.button8);
+        inspire = findViewById(R.id.button10);
+
+        home.setOnClickListener(v -> startActivity(new Intent(this, homePage.class)));
+        design.setOnClickListener(v -> startActivity(new Intent(this, kiltSelect.class)));
+        inspire.setOnClickListener(v -> startActivity(new Intent(this, galleryPage.class)));
+
+
         // Bottom Navbar start
         /*
         home = findViewById(R.id.nav_home);
