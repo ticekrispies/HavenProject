@@ -8,4 +8,5 @@
     <string name="home">Home</string>
     <string name="design">Design</string>
     <string name="inspiration">Inspiration</string>
+    <string name="GalleryHeading">TextView</string>
 </resources>
