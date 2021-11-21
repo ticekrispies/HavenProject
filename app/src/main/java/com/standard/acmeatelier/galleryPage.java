@@ -23,4 +23,8 @@ public class galleryPage extends AppCompatActivity {
         actionBar.setCustomView(view);
         // Bottom Navbar end
     }
+
+    public void hideImage(View view){
+        view.setAlpha(0f);
+    }
 }

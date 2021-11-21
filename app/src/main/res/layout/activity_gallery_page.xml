@@ -34,6 +34,7 @@
                     android:layout_width="190dp"
                     android:layout_height="300dp"
                     android:layout_weight="1"
+                    android:onClick="hideImage"
                     app:srcCompat="@drawable/lagos_kilt" />
 
                 <ImageView
