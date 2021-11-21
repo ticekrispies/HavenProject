@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +25,17 @@ public class galleryPage extends AppCompatActivity {
         // Bottom Navbar end
     }
 
-    public void hideImage(View view){
-        view.setAlpha(0f);
+    public void hideImage(View view) {
+        if (view.getAlpha() == 1) {
+            AlphaAnimation hideImage = new AlphaAnimation(1f, 0f);
+            hideImage.setDuration(1000);
+            hideImage.setFillAfter(true);
+            view.startAnimation(hideImage);
+        } else {
+            AlphaAnimation showImage = new AlphaAnimation(0f, 1f);
+            showImage.setDuration(1000);
+            showImage.setFillAfter(true);
+            view.startAnimation(showImage);
+        }
     }
 }
