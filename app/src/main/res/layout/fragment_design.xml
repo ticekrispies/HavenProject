@@ -85,24 +85,27 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/PlaceholderTexture"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_weight="1"
+                        android:contentDescription="colour3"
                         app:srcCompat="@drawable/ochreherringbone" />
 
                     <ImageButton
-                        android:id="@+id/imageButton4"
+                        android:id="@+id/placeholderTexture2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_weight="1"
+                        android:contentDescription="colour2"
                         app:srcCompat="@drawable/chocofelt" />
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/placeholderTexture3"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_weight="1"
+                        android:contentDescription="colour1"
                         app:srcCompat="@drawable/oceantweed" />
 
                 </LinearLayout>
@@ -110,85 +113,34 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/imageButton7"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/ochreherringbone" />
+                        android:contentDescription="colour4"
+                        app:srcCompat="@drawable/index" />
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/imageButton6"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/oceantweed" />
+                        android:contentDescription="colour5"
+                        app:srcCompat="@drawable/erskinmono" />
 
                     <ImageButton
-                        android:id="@+id/imageButton4"
+                        android:id="@+id/imageButton5"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/chocofelt" />
-
+                        android:contentDescription="colour6"
+                        app:srcCompat="@drawable/ulsterscots" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/chocofelt" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/ochreherringbone" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/oceantweed" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/ochreherringbone" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/oceantweed" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/chocofelt" />
-
-                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 
