@@ -1,4 +1,4 @@
-package com.standard.acmeatelier;
+package com.standard.havenjager;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,11 +9,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 
-public class GalleryFragment extends Fragment {
+public class InfoFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_inspire, container, false);
+        return inflater.inflate(R.layout.fragment_info, container, false);
     }
 }

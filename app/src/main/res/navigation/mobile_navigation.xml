@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.standard.acmeatelier.HomeFragment"
+        android:name="com.standard.havenjager.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_design"
-        android:name="com.standard.acmeatelier.DesignFragment"
-        android:label="@string/design"
-        tools:layout="@layout/fragment_design" />
+        android:name="com.standard.havenjager.TestFragment"
+        android:label="@string/test"
+        tools:layout="@layout/fragment_test" />
 
     <fragment
         android:id="@+id/navigation_inspire"
-        android:name="com.standard.acmeatelier.GalleryFragment"
-        android:label="@string/inspiration"
-        tools:layout="@layout/fragment_inspire" />
+        android:name="com.standard.havenjager.InfoFragment"
+        android:label="@string/info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

@@ -7,12 +7,12 @@
     </item>
     <item
         android:id="@+id/navigation_design"
-        android:icon="@drawable/designicon"
-        android:title="Design">
+        android:icon="@drawable/testsicon"
+        android:title="Tests">
     </item>
     <item
         android:id="@+id/navigation_inspire"
-        android:icon="@drawable/inspireicon"
-        android:title="Inspire">
+        android:icon="@drawable/infoicon"
+        android:title="More">
     </item>
 </menu>

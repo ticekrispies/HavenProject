@@ -1,4 +1,4 @@
-package com.standard.acmeatelier;
+package com.standard.havenjager;
 
 import org.junit.Test;
 

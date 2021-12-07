@@ -1,12 +1,6 @@
 <resources>
-    <string name="app_name">AcmeAtelier</string>
-    <string name="getStartedButton">Get Started</string>
-    <string name="moreButton">More</string>
-    <string name="aaLogo">Acme Atelier Logo</string>
-    <string name="AcmeHorizontal">Acme Atelier Horizontal Logo</string>
-    <string name="Back">Back</string>
+    <string name="app_name">Haven</string>
     <string name="home">Home</string>
-    <string name="design">Design</string>
-    <string name="inspiration">Inspiration</string>
-    <string name="GalleryHeading">TextView</string>
+    <string name="test">Tests</string>
+    <string name="info">Info</string>
 </resources>
