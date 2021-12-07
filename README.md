@@ -1,2 +1,2 @@
-# acme-atelier-app
-Repo to store acme atelier app.
+# HavenProject
+Repo to store HavenProject.
