@@ -1,2 +1,2 @@
 # HavenProject
-Repo to store HavenProject app.
+Repo to store HavenProject.
