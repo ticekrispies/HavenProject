@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.*;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -28,7 +29,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextViewResult;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,22 +58,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void SentinoTest() throws IOException {
-        String data = "{'text': 'I am 30 years old man. I studied physics and currently work as a software engineer. I am married and have a couple of kids. What else I can tell... I am open to new experience and like to chat. I am being nasty sometimes.','inventories': ['big5', 'neo'],'lang': 'en'}";
+        String data = "{\"text\": \"I am brave\", \"inventory\": \"neo\"}";
 
-        Uri uri = Uri.parse("https://sentino.org/api/v2/person/description");
+        Uri uri = Uri.parse("https://sentino.org/api/v2/inventories");
         Uri.Builder uriBuilder = uri.buildUpon();
-        uriBuilder.appendQueryParameter("Authorization", "Token c20ff2e4553c7260ff45438a8a9fef99983d0d42");
-        uriBuilder.appendQueryParameter("Content-Type", "application/json");
-        uriBuilder.appendQueryParameter("-d", data);
 
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
 
         StringRequest request = new StringRequest(
-                Request.Method.POST,
+                Request.Method.GET,
                 uri.toString(),
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        System.out.println("SUCCESS");
                         System.out.println(response);
                     }
 
@@ -83,7 +82,16 @@ public class MainActivity extends AppCompatActivity {
                         System.out.println(error);
                         System.out.println(uriBuilder.toString());
                     }
-                });
+
+                }){
+        @Override
+        public Map<String, String> getHeaders() throws AuthFailureError {
+            Map<String, String>  params = new HashMap<String, String>();
+            params.put("Authorization", "Token c20ff2e4553c7260ff45438a8a9fef99983d0d42");
+            params.put("Content-Type", "application/json");
+
+            return params;
+        }};
         queue.add(request);
     }
 
