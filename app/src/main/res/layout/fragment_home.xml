@@ -5,28 +5,50 @@
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f5f5e4"
     tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="206dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/havenlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_view_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="Home"
+        android:layout_marginTop="64dp"
+        android:text="Welcome to"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="311dp"
+        android:layout_height="122dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text='Take a free personality test and get a "freakishly accurate" description of who you are, and why you do things a certain way!'
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="64dp"
-        android:text="Button"
+        android:layout_width="223dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="54dp"
+        android:text="Get Started!"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_result"
-        tools:onClick="Sentino" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

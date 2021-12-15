@@ -3,6 +3,8 @@ package com.standard.havenjager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,17 +21,18 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,13 +40,8 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
-        try {
-            System.out.println("TRY");
-            SentinoTest();
-        } catch (IOException e) {
-            System.out.println("FAILED");
-            e.printStackTrace();
-        }
+        runSentino();
+
 
         // Bottom Nav Bar start
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
@@ -57,45 +55,17 @@ public class MainActivity extends AppCompatActivity {
         // Bottom Nav Bar end
     }
 
-    public void SentinoTest() throws IOException {
-        String data = "{\"text\": \"I am brave\", \"inventory\": \"neo\"}";
-
-        Uri uri = Uri.parse("https://sentino.org/api/v2/inventories");
-        Uri.Builder uriBuilder = uri.buildUpon();
-
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-
-        StringRequest request = new StringRequest(
-                Request.Method.GET,
-                uri.toString(),
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        System.out.println("SUCCESS");
-                        System.out.println(response);
-                    }
-
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        System.out.println("FAIL");
-                        System.out.println(error);
-                        System.out.println(uriBuilder.toString());
-                    }
-
-                }){
-        @Override
-        public Map<String, String> getHeaders() throws AuthFailureError {
-            Map<String, String>  params = new HashMap<String, String>();
-            params.put("Authorization", "Token c20ff2e4553c7260ff45438a8a9fef99983d0d42");
-            params.put("Content-Type", "application/json");
-
-            return params;
-        }};
-        queue.add(request);
+    public void runSentino(){
+        Sentino sentino = new Sentino();
+        Thread t1 = new Thread(sentino);
+        t1.start();
     }
 
-
+    public void runAdvice(View view){
+        AdviceSlip adviceSlip1 = new AdviceSlip();
+        Thread t2 = new Thread(adviceSlip1);
+        t2.start();
+    }
 
     // Method for bottom nav bar
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
