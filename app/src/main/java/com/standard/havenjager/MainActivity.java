@@ -1,47 +1,20 @@
 package com.standard.havenjager;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.*;
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
-
-        runSentino();
-
 
         // Bottom Nav Bar start
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
@@ -55,16 +28,17 @@ public class MainActivity extends AppCompatActivity {
         // Bottom Nav Bar end
     }
 
-    public void runSentino(){
-        Sentino sentino = new Sentino();
-        Thread t1 = new Thread(sentino);
-        t1.start();
+    // Creates Sentino instance and runs the runSentino class in Sentino class. It adds the callable to the executor.
+    public void runSentino(View v){
+        Sentino s = new Sentino();
+        s.runSentino(v);
     }
 
-    public void runAdvice(View view){
-        AdviceSlip adviceSlip1 = new AdviceSlip();
-        Thread t2 = new Thread(adviceSlip1);
-        t2.start();
+    // Creates Advice API instance and runs the runAdvice class in AdviceSlip class. It adds the callable to the executor.
+    public void runAdvice(View v){
+        AdviceSlip a = new AdviceSlip();
+        a.getAdvice(v);
+
     }
 
     // Method for bottom nav bar

@@ -4,4 +4,6 @@
     <string name="test">Tests</string>
     <string name="info">Info</string>
     <string name="advice1">...</string>
+    <string name="sentino_api_post_get_nresult_in_console">Sentino API POST+GET\nresult in console</string>
+    <string name="tests">Tests</string>
 </resources>

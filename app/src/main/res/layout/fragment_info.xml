@@ -5,7 +5,9 @@
     android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f5f5e4">
+    android:background="#f5f5e4"
+    tools:ignore="HardcodedText">
+
 
 
     <ScrollView
@@ -13,7 +15,9 @@
         android:layout_height="678dp"
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toTopOf="@+id/textView5"
-        tools:layout_editor_absoluteX="1dp">
+        tools:layout_editor_absoluteX="1dp"
+        tools:ignore="MissingConstraints"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,13 +50,13 @@
                 <!-- Card Content Text -->
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@id/button2"
                     android:onClick="runAdvice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tap me for some advice!"
                     android:layout_gravity="top|center_horizontal"
-                    />
+                     />
 
                 <TextView
                     android:id="@+id/advice1"
@@ -61,7 +65,7 @@
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="20dp"
-                    android:text="..." />
+                    android:text="Result will be in run console" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
